@@ -15,8 +15,8 @@ import com.bumptech.glide.request.RequestOptions.bitmapTransform
 
 @BindingAdapter("placeData")
 fun RecyclerView.setPlaceData(data: LiveData<ArrayList<PlaceModel>>) {
-    val adoptAdapter: PlaceAdapter = adapter as PlaceAdapter
-    data.value?.let { adoptAdapter.item = it }
+    val placeAdapter: PlaceAdapter = adapter as PlaceAdapter
+    data.value?.let { placeAdapter.item = it }
 }
 
 @BindingAdapter("imageUrl", "error")
