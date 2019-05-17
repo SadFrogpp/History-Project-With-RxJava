@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="vm"
+                type="com.example.history_project_rxjava.ui.place.PlaceViewModel"/>
+
+        <import type="com.example.history_project_rxjava.model.PlaceModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.place.PlaceActivity">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/place_get_rv"
+                app:placeData="@{vm.placeModel}"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
